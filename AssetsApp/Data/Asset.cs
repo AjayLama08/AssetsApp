@@ -29,7 +29,7 @@ namespace AssetsApp.Data
 
         public override string ToString()
         {
-            var str = Id + ":" + Name + Location + DateAcquired.ToShortDateString() + "InUse:" + InUse + "£" + "PurchasePrice:" + PurchasePrice;
+            var str = Id + ": " + $"{Name} {Location} {"("}{DateAcquired.ToShortDateString()}{")"} { InUse} {"£"}{PurchasePrice} {"**"}";
             return str;
         }
 
