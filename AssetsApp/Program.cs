@@ -13,3 +13,8 @@ using var db = new AssetsDbContext();
 var assets = db.Assets.ToList();    
 
 displayAssets(assets);
+
+var newAsset = new Asset(0, "Tesla Car", Location.KATHMANDU, DateTime.Now, true, 50000);
+
+db.Assets.Add(newAsset);
+db.SaveChanges();
